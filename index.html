@@ -301,25 +301,49 @@
               <div class="md:flex items-center md:justify-between">
                 <div class="md:w-5/12"></div>
                 <div class="md:w-5/12 bg-gray-100 p-6 rounded-lg shadow-md">
-                  <p class="text-sm font-semibold text-blue-600">
-                    Feb 2018 – Ago 2019
-                  </p>
-                  <h3 class="text-xl font-bold mt-1">
-                    Desarrollador FullStack Sr
-                  </h3>
-                  <p class="text-gray-500 mb-3">Bac | Credomatic</p>
+                  <p class="text-sm font-semibold text-blue-600"></p>
+                  <h3 class="text-xl font-bold mt-1"></h3>
+                  <p class="text-gray-500 mb-3"></p>
                   <ul
                     class="list-disc list-inside text-gray-600 text-sm space-y-1"
-                  >
-                    <li>
-                      Mejoré la productividad en un 500% con cargas masivas para
-                      facturación electrónica.
-                    </li>
-                    <li>
-                      Desarrollé un producto de encuestas dinámicas para RRHH.
-                    </li>
-                  </ul>
+                  ></ul>
                 </div>
+              </div>
+            </div>
+            <!-- Item de la línea de tiempo (invertido) -->
+            <div class="relative mb-8">
+              <div
+                class="absolute w-4 h-4 bg-blue-600 rounded-full left-1/2 top-1 transform -translate-x-1/2 -translate-y-1/2"
+              ></div>
+              <div
+                class="md:flex items-center md:justify-between flex-row-reverse"
+              >
+                <div class="md:w-5/12"></div>
+                <div class="md:w-5/12 bg-gray-100 p-6 rounded-lg shadow-md">
+                  <p class="text-sm font-semibold text-blue-600"></p>
+                  <h3 class="text-xl font-bold mt-1"></h3>
+                  <p class="text-gray-500 mb-3"></p>
+                  <ul
+                    class="list-disc list-inside text-gray-600 text-sm space-y-1"
+                  ></ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Item de la línea de tiempo Datafactory CR -->
+          <div class="relative mb-8">
+            <div
+              class="absolute w-4 h-4 bg-blue-600 rounded-full left-1/2 top-1 transform -translate-x-1/2 -translate-y-1/2"
+            ></div>
+            <div class="md:flex items-center md:justify-between">
+              <div class="md:w-5/12"></div>
+              <div class="md:w-5/12 bg-gray-100 p-6 rounded-lg shadow-md">
+                <p class="text-sm font-semibold text-blue-600"></p>
+                <h3 class="text-xl font-bold mt-1"></h3>
+                <p class="text-gray-500 mb-3"></p>
+                <ul
+                  class="list-disc list-inside text-gray-600 text-sm space-y-1"
+                ></ul>
               </div>
             </div>
           </div>
@@ -637,7 +661,8 @@
                 <a
                   id="cv-download"
                   href="assets/Curriculum vitae - Oscar Marchena Chaves_ES.pdf"
-                  download
+                  target="_blank"
+                  rel="noopener noreferrer"
                   class="w-full text-center block bg-gray-200 text-gray-800 px-8 py-3 rounded-lg font-semibold hover:bg-gray-300 transition duration-300"
                   >Descargar CV</a
                 >
@@ -703,6 +728,21 @@
                   "Mejoré la productividad en un 500% con cargas masivas para facturación electrónica.",
                   "Desarrollé un producto de encuestas dinámicas para RRHH.",
                 ],
+              },
+              {
+                date: "Enero 2017 – Febrero 2018",
+                title: "Desarrollador FullStack",
+                company: "Novacomp",
+                bullets: [
+                  "Implemente soluciones a los clientes bajo la modalidad de outsourcing, mediante requerimientos técnicos.",
+                  "Trabajé en al menos 2 proyectos de migración de proyectos a tecnologías nuevas.",
+                ],
+              },
+              {
+                date: "Enero 2015 – Enero 2017",
+                title: "Desarrollador FullStack",
+                company: "Datafactory CR",
+                bullets: [],
               },
             ],
           },
@@ -793,6 +833,21 @@
                   "Developed a dynamic survey product for HR.",
                 ],
               },
+              {
+                date: "Jan 2017 – Feb 2018",
+                title: "FullStack Developer",
+                company: "Novacomp",
+                bullets: [
+                  "Implemented client solutions under outsourcing, based on technical requirements.",
+                  "Worked on at least 2 projects migrating to new technologies.",
+                ],
+              },
+              {
+                date: "Jan 2015 – Jan 2017",
+                title: "FullStack Developer",
+                company: "Datafactory CR",
+                bullets: [],
+              },
             ],
           },
           skills: {
@@ -832,9 +887,10 @@
           },
         },
       };
-      let currentLang = "es";
+      let currentLang = localStorage.getItem("lang") || "es";
       function setLang(lang) {
         currentLang = lang;
+        localStorage.setItem("lang", lang);
         // Navbar
         document.getElementById("title-text").innerText =
           translations[lang].title;
@@ -944,7 +1000,7 @@
           setLang(currentLang === "es" ? "en" : "es");
         });
       // Inicializar idioma
-      setLang("es");
+      setLang(currentLang);
     </script>
 
     <!-- Footer -->
