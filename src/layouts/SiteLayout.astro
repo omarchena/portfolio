@@ -1,0 +1,161 @@
+---
+import type { Locale } from "../i18n/content";
+
+interface Props {
+  lang: Locale;
+  title: string;
+  description: string;
+  nav: readonly string[];
+  language: string;
+}
+
+const { lang, title, description, nav, language } = Astro.props;
+const ids = ["sobre-mi", "experiencia", "proyectos", "certificaciones", "habilidades", "contacto"];
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#090d12" />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href={`/${lang}/`} aria-label="Marchena.tech, inicio">
+          <span class="brand-mark">&lt;/&gt;</span>
+          <span class="brand-name">Marchena<span>.tech</span><small>Óscar Marchena</small></span>
+        </a>
+        <nav class="desktop-nav" aria-label="Navegación principal">
+          {ids.map((id, index) => <a href={`#${id}`}>{nav[index]}</a>)}
+        </nav>
+        <div class="header-actions">
+          <div class="language-switch" aria-label={language}>
+            <a href="/es/" aria-current={lang === "es" ? "page" : undefined}>ES</a>
+            <a href="/en/" aria-current={lang === "en" ? "page" : undefined}>EN</a>
+          </div>
+          <a class="button button-small button-primary header-contact" href="#contacto">
+            <span aria-hidden="true">↗</span>{nav[5]}
+          </a>
+          <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+            <span></span><span></span>
+          </button>
+        </div>
+      </div>
+      <nav class="mobile-nav" aria-label="Navegación móvil" hidden>
+        {ids.map((id, index) => <a href={`#${id}`}>{nav[index]}</a>)}
+      </nav>
+    </header>
+    <main><slot /></main>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <a class="brand" href={`/${lang}/`}>
+          <span class="brand-mark">&lt;/&gt;</span>
+          <span class="brand-name">Marchena<span>.tech</span><small>Óscar Marchena</small></span>
+        </a>
+        <p><slot name="footer" /></p>
+        <span class="copyright">© {new Date().getFullYear()} Óscar Ricardo Marchena Chaves. <slot name="rights" /></span>
+      </div>
+    </footer>
+    <script>
+      const toggle = document.querySelector<HTMLButtonElement>(".menu-toggle");
+      const mobileNav = document.querySelector<HTMLElement>(".mobile-nav");
+
+      toggle?.addEventListener("click", () => {
+        const isExpanded = toggle.getAttribute("aria-expanded") === "true";
+        toggle.setAttribute("aria-expanded", String(!isExpanded));
+        if (mobileNav) mobileNav.hidden = isExpanded;
+      });
+
+      mobileNav?.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileNav.hidden = true;
+          toggle?.setAttribute("aria-expanded", "false");
+        });
+      });
+    </script>
+    <style is:global>
+      :root {
+        color-scheme: dark;
+        font-family: "DM Sans", sans-serif;
+        color: #e8edf2;
+        background: #090d12;
+        font-synthesis: none;
+        text-rendering: optimizeLegibility;
+        --canvas: #090d12;
+        --surface: #101820;
+        --surface-raised: #151f28;
+        --line: #26343e;
+        --muted: #91a0aa;
+        --cyan: #62d5dc;
+        --mint: #a7e2c3;
+        --blue: #83b6ff;
+        --content: 1160px;
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; scroll-padding-top: 92px; }
+      body { margin: 0; min-width: 320px; background: var(--canvas); }
+      body::before {
+        position: fixed; inset: 0; z-index: -1; content: ""; pointer-events: none;
+        background: linear-gradient(90deg, transparent 49.9%, #ffffff05 50%, transparent 50.1%);
+        background-size: 80px 100%; opacity: .28;
+      }
+      a { color: inherit; text-decoration: none; }
+      button, input, textarea { font: inherit; }
+      button, a { -webkit-tap-highlight-color: transparent; }
+      ::selection { color: #071113; background: var(--cyan); }
+      .site-header { position: sticky; top: 0; z-index: 20; border-bottom: 1px solid #ffffff0c; background: #090d12e8; backdrop-filter: blur(18px); }
+      .header-inner, .footer-inner { width: min(var(--content), calc(100% - 48px)); margin: auto; }
+      .header-inner { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+      .brand { display: inline-flex; align-items: center; gap: 11px; flex: 0 0 auto; }
+      .brand-mark { display: grid; place-items: center; width: 42px; height: 34px; border: 1px solid #62d5dc50; background: #62d5dc10; color: var(--cyan); font: 500 13px "DM Mono", monospace; }
+      .brand-name { font: 800 15px Manrope, sans-serif; color: #f4f6f8; }
+      .brand-name > span { color: var(--cyan); }
+      .brand-name small { display: block; margin-top: 2px; color: var(--muted); font: 10px "DM Mono", monospace; letter-spacing: 0; }
+      .desktop-nav { display: flex; align-items: center; gap: clamp(16px, 2vw, 28px); }
+      .desktop-nav a, .mobile-nav a { color: #b0bbc3; font-size: 13px; transition: color .2s ease; }
+      .desktop-nav a:hover, .mobile-nav a:hover { color: var(--cyan); }
+      .header-actions { display: flex; align-items: center; gap: 12px; }
+      .language-switch { display: inline-flex; gap: 2px; padding: 3px; border: 1px solid var(--line); background: #0e151b; }
+      .language-switch a { min-width: 34px; padding: 6px 7px; color: var(--muted); text-align: center; font: 11px "DM Mono", monospace; }
+      .language-switch a[aria-current="page"] { color: #061316; background: var(--cyan); }
+      .button { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 46px; padding: 0 20px; border: 1px solid transparent; font-size: 13px; font-weight: 700; transition: transform .2s ease, background .2s ease, border-color .2s ease; }
+      .button:hover { transform: translateY(-2px); }
+      .button-primary { background: var(--cyan); color: #071416; }
+      .button-primary:hover { background: #92e5e9; }
+      .button-secondary { border-color: #ffffff24; background: #ffffff08; color: #edf2f5; }
+      .button-secondary:hover { border-color: #62d5dc80; }
+      .button-small { min-height: 38px; padding: 0 13px; }
+      .menu-toggle, .mobile-nav { display: none; }
+      .site-footer { border-top: 1px solid var(--line); background: #070a0e; }
+      .footer-inner { min-height: 132px; padding: 26px 0; display: flex; align-items: center; justify-content: space-between; gap: 22px; flex-wrap: wrap; }
+      .footer-inner p { color: var(--muted); font-size: 13px; }
+      .copyright { color: #687781; font: 10px "DM Mono", monospace; }
+      @media (max-width: 920px) {
+        .desktop-nav { display: none; }
+        .header-inner { min-height: 68px; }
+        .menu-toggle { display: grid; align-content: center; gap: 5px; width: 38px; height: 38px; padding: 9px; border: 1px solid var(--line); background: transparent; }
+        .menu-toggle span { height: 1px; width: 100%; background: #e8edf2; }
+        .mobile-nav:not([hidden]) { display: grid; gap: 2px; padding: 0 24px 18px; }
+        .mobile-nav a { padding: 10px 0; border-top: 1px solid #ffffff0b; }
+      }
+      @media (max-width: 600px) {
+        .header-inner, .footer-inner { width: calc(100% - 36px); }
+        .header-contact { display: none; }
+        .footer-inner { justify-content: center; text-align: center; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+      }
+    </style>
+  </body>
+</html>
