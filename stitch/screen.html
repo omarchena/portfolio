@@ -1,0 +1,807 @@
+<!DOCTYPE html><html class="dark" lang="es" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "border-glow": "rgba(37, 99, 235, 0.35)", "surface": "#0f131c", "secondary": "#4cd7f6", "outline": "#8d90a0", "border-subtle": "#1E293B", "outline-variant": "#434655", "on-primary": "#002a78", "primary": "#b4c5ff", "inverse-surface": "#dfe2ef", "surface-card": "#0F172A", "on-primary-fixed-variant": "#003ea8", "secondary-fixed-dim": "#4cd7f6", "tertiary-fixed-dim": "#c0c1ff", "inverse-primary": "#0053db", "primary-fixed-dim": "#b4c5ff", "surface-base": "#06090F", "primary-fixed": "#dbe1ff", "text-muted": "#64748B", "text-primary": "#F8FAFC", "surface-canvas": "#090D16", "inverse-on-surface": "#2c303a", "surface-container-high": "#262a34", "secondary-container": "#03b5d3", "on-error-container": "#ffdad6", "on-surface-variant": "#c3c6d7", "on-primary-fixed": "#00174b", "on-secondary-container": "#00424e", "surface-card-elevated": "#1E293B", "on-secondary-fixed": "#001f26", "surface-dim": "#0f131c", "accent-emerald": "#10B981", "surface-tint": "#b4c5ff", "on-tertiary-fixed": "#07006c", "accent-electric": "#38BDF8", "surface-container-low": "#181b25", "text-secondary": "#94A3B8", "on-primary-container": "eeefff", "on-error": "#690005", "error": "#ffb4ab", "on-tertiary-fixed-variant": "#2f2ebe", "on-tertiary-container": "#f1eeff", "border-glass": "rgba(255, 255, 255, 0.08)", "surface-variant": "#31353f", "on-tertiary": "#1000a9", "error-container": "#93000a", "tertiary-container": "#585be6", "on-background": "#dfe2ef", "secondary-fixed": "#acedff", "surface-container": "#1c1f29", "on-secondary-fixed-variant": "#004e5c", "surface-container-lowest": "#0a0e17", "tertiary-fixed": "#e1e0ff", "primary-container": "#2563eb", "on-surface": "#dfe2ef", "surface-bright": "#353943", "tertiary": "#c0c1ff", "surface-container-highest": "#31353f", "on-secondary": "#003640", "background": "#0f131c" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "gutter": "1.5rem", "margin": "2rem", "gutter-mobile": "1rem", "space-xl": "2.5rem", "space-3xl": "6rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "margin-mobile": "1.25rem", "space-2xl": "4rem", "space-md": "1rem" }, "fontFamily": { "label-code-badge": [ "JetBrains Mono" ], "body-lg": [ "Inter" ], "headline-lg-mobile": [ "Plus Jakarta Sans" ], "label-mono": [ "JetBrains Mono" ], "body-sm": [ "Inter" ], "body-md": [ "Inter" ], "headline-md": [ "Plus Jakarta Sans" ], "display-hero": [ "Plus Jakarta Sans" ], "headline-sm": [ "Plus Jakarta Sans" ], "button-text": [ "Plus Jakarta Sans" ], "display-hero-mobile": [ "Plus Jakarta Sans" ], "headline-lg": [ "Plus Jakarta Sans" ], "metric-display": [ "Plus Jakarta Sans" ] }, "fontSize": { "label-code-badge": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "600" } ], "body-lg": [ "18px", { "lineHeight": "30px", "fontWeight": "400" } ], "headline-lg-mobile": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "label-mono": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" } ], "body-sm": [ "13px", { "lineHeight": "20px", "fontWeight": "400" } ], "body-md": [ "15px", { "lineHeight": "24px", "fontWeight": "400" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "display-hero": [ "56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "800" } ], "headline-sm": [ "18px", { "lineHeight": "26px", "fontWeight": "600" } ], "button-text": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "display-hero-mobile": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" } ], "headline-lg": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "metric-display": [ "44px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800" } ] } } } };</script></head><body class="bg-surface-canvas font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-canvas/85 backdrop-blur-2xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="h-20 max-w-[1240px] mx-auto px-margin flex items-center justify-between gap-4"><div class="flex items-center gap- space-sm"><a class="group flex items-center gap-space-sm" data-path="sobre-mi" href="#"><div class="px-space-sm py-space-xs rounded bg-surface-container-high font-label-code-badge text-label-code-badge text-secondary border border-border-glass transition-colors group-hover:bg-surface-variant">&lt;/&gt;</div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-text-primary group-hover:text-primary transition-colors">Marchena<span class="text-secondary">.tech</span></span><span class="font-label-mono text-[10px] uppercase tracking-wider text-text-muted">Óscar Marchena</span></div></a></div><nav class="hidden lg:flex items-center gap-space-xs px-space-xs py-space-xs rounded-xl bg-surface-container-lowest/80" data-active-classes="bg-surface-container-high text-primary rounded-lg font-semibold"><a class="px-space-md py-space-xs rounded-lg font-button-text text-button-text text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="sobre-mi" href="#">Sobre Mí</a><a class="px-space-md py-space-xs rounded-lg font-button-text text-button-text text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="experiencia" href="#">Experiencia</a><a class="px-space-md py-space-xs rounded-lg font-button-text text-button-text text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="proyectos" href="#">Proyectos</a><a class="px-space-md py-space-xs rounded-lg font-button-text text-button-text text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="habilidades" href="#">Habilidades</a><a class="px-space-md py-space-xs rounded-lg font-button-text text-button-text text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="certificaciones" href="#certificaciones">Certificaciones</a><a class="px-space-md py-space-xs rounded-lg font-button-text text-button-text text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" data-path="contacto" href="#">Contacto</a></nav><div class="flex items-center gap-space-sm sm:gap-space-md"><div id="lang-switch-wrapper" class="inline-flex items-center p-1 rounded-full bg-surface-container-lowest/90 border border-border-glass shadow-inner gap-1"><span class="material-symbols-outlined text-[16px] text-text-muted pl-1.5 hidden sm:inline-block">language</span><div class="flex items-center font-label-mono text-[11px]"><button type="button" id="lang-btn-es" onclick="(function(){document.getElementById('lang-btn-es').className='px-2.5 py-0.5 rounded-full bg-surface-container-high text-secondary font-semibold transition-all shadow-sm';document.getElementById('lang-btn-en').className='px-2.5 py-0.5 rounded-full text-text-muted hover:text-on-surface transition-all';document.documentElement.lang='es';})()" class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-secondary font-semibold transition-all shadow-sm" aria-label="Cambiar idioma a Español">ES</button><button type="button" id="lang-btn-en" onclick="(function(){document.getElementById('lang-btn-en').className='px-2.5 py-0.5 rounded-full bg-surface-container-high text-secondary font-semibold transition-all shadow-sm';document.getElementById('lang-btn-es').className='px-2.5 py-0.5 rounded-full text-text-muted hover:text-on-surface transition-all';document.documentElement.lang='en';})()" class="px-2.5 py-0.5 rounded-full text-text-muted hover:text-on-surface transition-all" aria-label="Switch language to English">EN</button></div></div><a class="hidden sm:inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-xl font-button-text text-button-text text-text-primary bg-surface-card hover:bg-surface-container-high hover:text-secondary shadow-[0_1px_8px_rgba(0,0,0,0.04)] transition-all" data-path="descargar-cv" href="#"><span class="material-symbols-outlined text-[18px]">download</span><span class="">CV PDF</span></a><a class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-xl font-button-text text-button-text bg-primary-container text-on-primary-container hover:bg-secondary-container hover:text-on-secondary-container shadow-[0_0_20px_rgba(37,99,235,0.35)] transition-all" data-path="contacto" href="#"><span class="material-symbols-outlined text-[18px]">terminal</span><span class="">Hablemos</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface-canvas"><div class="flex flex-col w-full">
+<!-- Atmospheric Glow Backdrop -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[850px] h-[450px] bg-primary-container/15 rounded-full blur-[130px] pointer-events-none"></div>
+<div class="absolute top-[680px] -left-20 w-[420px] h-[420px] bg-secondary/10 rounded-full blur-[120px] pointer-events-none"></div>
+<div class="absolute top-[1600px] -right-20 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[140px] pointer-events-none"></div>
+<!-- 1. HERO SECTION -->
+<section class="relative max-w-[1240px] mx-auto px-margin pt-space-2xl pb-space-3xl flex flex-col items-start">
+<!-- Status Badge Pill -->
+<div class="inline-flex items-center gap-space-sm px-space-md py-space-xs rounded-full bg-surface-card/90 border border-border-glass shadow-lg mb-space-lg backdrop-blur-md">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-emerald opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-accent-emerald"></span>
+</span>
+<span class="font-label-mono text-label-mono text-secondary tracking-wide uppercase font-semibold">
+          DISPONIBLE PARA NUEVAS OPORTUNIDADES &amp; CONSULTORÍA REMOTA
+        </span>
+</div>
+<!-- Hero Header & Value Proposition -->
+<div class="max-w-[980px]">
+<h1 class="font-display-hero text-display-hero text-text-primary tracking-tight font-extrabold mb-space-md">
+          Óscar Ricardo Marchena Chaves
+        </h1>
+<p class="font-body-lg text-body-lg text-text-secondary leading-relaxed max-w-[860px] mb-space-xl">
+<strong class="text-text-primary font-semibold">Senior Software Engineer &amp; Tech Consultant</strong> con <span class="text-secondary font-semibold">+9 años</span> construyendo arquitecturas escalables, sistemas bancarios de misión crítica e impulsando el desarrollo acelerado con Inteligencia Artificial.
+        </p>
+</div>
+<!-- Action Buttons & Socials -->
+<div class="flex flex-wrap items-center gap-space-md mb-space-2xl">
+<a class="inline-flex items-center gap-space-xs px-space-lg py-space-sm rounded-xl font-button-text text-button-text bg-primary-container text-on-primary-container hover:bg-secondary-container hover:text-on-secondary-container shadow-[0_0_24px_rgba(37,99,235,0.4)] transition-all transform hover:-translate-y-0.5" href="#experiencia">
+<span class="">Ver Proyectos &amp; Experiencia</span>
+<span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+</a>
+<a class="inline-flex items-center gap-space-xs px-space-lg py-space-sm rounded-xl font-button-text text-button-text bg-surface-card text-text-primary hover:bg-surface-card-elevated hover:text-secondary shadow-md transition-all" href="#contacto">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span class="">Descargar CV (PDF)</span>
+</a>
+<div class="flex items-center gap-space-xs pl-space-sm">
+<a aria-label="LinkedIn Óscar Marchena" class="w-11 h-11 rounded-xl bg-surface-card flex items-center justify-center text-text-secondary hover:text-secondary hover:bg-surface-container-high transition-colors shadow-sm" href="https://www.linkedin.com/in/omarchena/" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</a>
+<a aria-label="Correo de Óscar Marchena" class="w-11 h-11 rounded-xl bg-surface-card flex items-center justify-center text-text-secondary hover:text-secondary hover:bg-surface-container-high transition-colors shadow-sm" href="mailto:oscar.marchena@hotmail.com">
+<span class="material-symbols-outlined text-[20px]">alternate_email</span>
+</a>
+<a aria-label="Tecnologías e ingeniería" class="w-11 h-11 rounded-xl bg-surface-card flex items-center justify-center text-text-secondary hover:text-secondary hover:bg-surface-container-high transition-colors shadow-sm" href="#habilidades">
+<span class="material-symbols-outlined text-[20px]">code</span>
+</a>
+</div>
+</div>
+<!-- Quick Metrics Grid -->
+<div class="w-full grid grid-cols-2 md:grid-cols-4 gap-space-md">
+<div class="p-space-lg rounded-xl bg-surface-card/85 backdrop-blur-md shadow-md flex flex-col justify-between">
+<span class="font-label-mono text-[11px] text-text-muted uppercase tracking-wider mb-space-xs">Trayectoria</span>
+<div class="font-metric-display text-metric-display bg-gradient-to-r from-text-primary to-secondary bg-clip-text text-transparent font-extrabold mb-space-xs">
+            +9
+          </div>
+<span class="font-body-sm text-body-sm text-text-secondary">Años de Experiencia Enterprise</span>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-card/85 backdrop-blur-md shadow-md flex flex-col justify-between">
+<span class="font-label-mono text-[11px] text-text-muted uppercase tracking-wider mb-space-xs">Optimización Scotiabank</span>
+<div class="font-metric-display text-metric-display bg-gradient-to-r from-text-primary to-accent-electric bg-clip-text text-transparent font-extrabold mb-space-xs">
+            -70%
+          </div>
+<span class="font-body-sm text-body-sm text-text-secondary">Reducción en Tiempos de Gestión</span>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-card/85 backdrop-blur-md shadow-md flex flex-col justify-between">
+<span class="font-label-mono text-[11px] text-text-muted uppercase tracking-wider mb-space-xs">Escalabilidad Legal</span>
+<div class="font-metric-display text-metric-display bg-gradient-to-r from-text-primary to-secondary bg-clip-text text-transparent font-extrabold mb-space-xs">
+            +200%
+          </div>
+<span class="font-body-sm text-body-sm text-text-secondary">Eficiencia en Contratos Dinámicos</span>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-card/85 backdrop-blur-md shadow-md flex flex-col justify-between">
+<span class="font-label-mono text-[11px] text-text-muted uppercase tracking-wider mb-space-xs">Outsourcing &amp; Banca</span>
+<div class="font-metric-display text-metric-display bg-gradient-to-r from-text-primary to-accent-emerald bg-clip-text text-transparent font-extrabold mb-space-xs">
+            3+
+          </div>
+<span class="font-body-sm text-body-sm text-text-secondary">Proyectos Enterprise Liderados</span>
+</div>
+</div>
+</section>
+<!-- 2. SECCIÓN SOBRE MÍ & FILOSOFÍA DE INGENIERÍA -->
+<section class="max-w-[1240px] mx-auto px-margin py-space-3xl" id="sobre-mi">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- Left Panel: Profile Visual Card -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<div class="p-space-lg rounded-2xl bg-surface-card/90 shadow-xl backdrop-blur-lg relative overflow-hidden">
+<div class="flex items-center gap-space-md mb-space-lg">
+<!-- Avatar circle with neon cyan ring -->
+<div class="relative w-20 h-20 rounded-full p-1 bg-gradient-to-tr from-secondary via-primary-container to-secondary-container shrink-0 shadow-[0_0_20px_rgba(76,215,246,0.3)]">
+<div class="w-full h-full rounded-full bg-surface-container-lowest flex items-center justify-center overflow-hidden">
+<span class="font-headline-md text-headline-md font-bold text-secondary">OM</span>
+</div>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm font-bold text-text-primary truncate">Óscar Marchena</span>
+<span class="font-label-mono text-label-mono text-secondary">Tech Lead &amp; Software Specialist</span>
+<span class="font-body-sm text-body-sm text-text-muted flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[14px] text-accent-emerald">location_on</span> Guanacaste, Costa Rica
+                </span>
+</div>
+</div>
+<!-- Reference Screenshot Showcase -->
+<div class="relative rounded-xl overflow-hidden bg-surface-container-lowest shadow-inner mb-space-md max-h-56">
+<img alt="Portafolio Óscar Marchena Tech" class="w-full object-cover object-top opacity-85 hover:opacity-100 transition-opacity" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg">
+<div class="absolute inset-x-0 bottom-0 py-2 px-3 bg-surface-container-lowest/90 backdrop-blur-md flex items-center justify-between">
+<span class="font-label-mono text-[10px] text-text-muted">ORIGEN: MARCHENA.TECH LIVE PRODUCTION</span>
+<span class="font-label-code-badge text-label-code-badge text-secondary font-mono">v3.2</span>
+</div>
+</div>
+<div class="space-y-space-sm pt-space-xs">
+<div class="flex items-center justify-between text-body-sm py-1.5 px-3 rounded-lg bg-surface-container-low">
+<span class="text-text-muted">Modalidad</span>
+<span class="font-medium text-text-primary">100% Remoto Global / Híbrido</span>
+</div>
+<div class="flex items-center justify-between text-body-sm py-1.5 px-3 rounded-lg bg-surface-container-low">
+<span class="text-text-muted">Especialidad</span>
+<span class="font-medium text-secondary">Fintech Core &amp; Microservicios</span>
+</div>
+<div class="flex items-center justify-between text-body-sm py-1.5 px-3 rounded-lg bg-surface-container-low">
+<span class="text-text-muted">Enfoque 2026</span>
+<span class="font-medium text-accent-electric">AI-Augmented Engineering</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Panel: Executive Narrative -->
+<div class="lg:col-span-7 flex flex-col justify-center">
+<div class="inline-flex items-center gap-2 mb-space-xs">
+<span class="font-label-code-badge text-label-code-badge text-secondary uppercase tracking-widest">// SOBRE MÍ &amp; FILOSOFÍA</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg font-bold text-text-primary tracking-tight mb-space-md">
+            Ingeniería de software pragmática, orientada a resiliencia e impacto cuantificable.
+          </h2>
+<div class="space-y-space-md text-text-secondary font-body-md text-body-md leading-relaxed">
+<p class="">
+              Originario de Guanacaste, Costa Rica, soy un profesional del desarrollo de software con una sólida trayectoria de más de 9 años. Mi experiencia abarca el ciclo completo de desarrollo de aplicaciones, especializándome en la implementación de soluciones que optimizan procesos de negocio de alto calibre y maximizan la eficiencia operativa.
+            </p>
+<p class="">
+              He liderado equipos tanto de back-end como de front-end en corporaciones bancarias de primer nivel y firmas de consultoría multinacional, siempre con el objetivo de entregar productos de alta calidad, tolerantes a fallos, escalables y con código limpio.
+            </p>
+<p class="">
+              Me apasiona resolver problemas sistémicos complejos y adoptar activamente herramientas de vanguardia, como la <strong class="text-text-primary">Inteligencia Artificial aplicada al ciclo de vida del software</strong>, acelerando el tiempo de llegada al mercado y blindando la seguridad operativa.
+            </p>
+</div>
+<!-- Highlight Key Value Proposition Pill Group -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm mt-space-lg pt-space-md">
+<div class="p-space-md rounded-xl bg-surface-card/60">
+<span class="material-symbols-outlined text-secondary text-[24px] mb-1">domain_verification</span>
+<div class="font-headline-sm text-[15px] font-semibold text-text-primary">Arquitectura Limpia</div>
+<p class="font-body-sm text-[12px] text-text-muted">Diseño DDD, microservicios desacoplados y testing riguroso.</p>
+</div>
+<div class="p-space-md rounded-xl bg-surface-card/60">
+<span class="material-symbols-outlined text-accent-electric text-[24px] mb-1">bolt</span>
+<div class="font-headline-sm text-[15px] font-semibold text-text-primary">Entrega Continua</div>
+<p class="font-body-sm text-[12px] text-text-muted">Automatización CI/CD, observabilidad y resiliencia en la nube.</p>
+</div>
+<div class="p-space-md rounded-xl bg-surface-card/60">
+<span class="material-symbols-outlined text-accent-emerald text-[24px] mb-1">psychology</span>
+<div class="font-headline-sm text-[15px] font-semibold text-text-primary">IA Productiva</div>
+<p class="font-body-sm text-[12px] text-text-muted">Aceleración de desarrollo mediante modelos generativos y Copilot.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. SECCIÓN EXPERIENCIA PROFESIONAL -->
+<section class="max-w-[1240px] mx-auto px-margin py-space-3xl" id="experiencia">
+<div class="flex flex-col mb-space-2xl">
+<span class="font-label-code-badge text-label-code-badge text-secondary uppercase tracking-widest">// TRAYECTORIA PROFESIONAL</span>
+<h2 class="font-headline-lg text-headline-lg font-bold text-text-primary tracking-tight mt-space-xs">
+          Experiencia Enterprise &amp; Liderazgo Técnico
+        </h2>
+<p class="font-body-md text-body-md text-text-secondary max-w-[700px] mt-space-xs">
+          Historial comprobado en banca internacional, desarrollo a gran escala y consultoría de tecnología crítica.
+        </p>
+</div>
+<!-- Timeline Container -->
+<div class="relative pl-6 md:pl-10 space-y-space-xl">
+<!-- Vertical Central Spine -->
+<div class="absolute left-2.5 md:left-4 top-2 bottom-4 w-[2px] bg-gradient-to-b from-primary-container via-secondary to-surface-card"></div>
+<!-- Milestone 1: Scotiabank -->
+<div class="relative group">
+<!-- Glow node checkpoint -->
+<div class="absolute -left-[27px] md:-left-[35px] top-1.5 w-6 h-6 rounded-full bg-surface-canvas flex items-center justify-center">
+<div class="w-3.5 h-3.5 rounded-full bg-secondary ring-4 ring-secondary/20 group-hover:scale-125 transition-transform"></div>
+</div>
+<div class="p-space-lg rounded-2xl bg-surface-card/90 shadow-xl backdrop-blur-md transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-xs mb-space-sm">
+<div>
+<span class="font-label-mono text-label-mono text-secondary px-2.5 py-0.5 rounded-full bg-surface-container-high inline-block mb-1">
+                  Nov 2020 – Actualidad
+                </span>
+<h3 class="font-headline-md text-headline-md font-bold text-text-primary">
+                  Especialista de Aplicaciones Java
+                </h3>
+<span class="font-headline-sm text-[16px] text-text-secondary font-medium">DAVIBank</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-surface-container-high text-accent-emerald font-label-mono text-[12px]">
+<span class="material-symbols-outlined text-[16px]">verified</span> Posición Activa
+              </div>
+</div>
+<ul class="space-y-space-sm font-body-md text-body-md text-text-secondary mb-space-md">
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span class="">Lideró el desarrollo de componentes centrales reduciendo tiempos de gestión operativa en un <strong class="text-accent-electric font-semibold">70%</strong>.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span class="">Arquitectó una herramienta de contratos legales dinámicos que incrementó la eficiencia operacional en un <strong class="text-secondary font-semibold">+200%</strong>.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span class="">Pionero en la integración de flujos de trabajo asistidos por IA y optimización de pipelines de entrega continua bancaria.</span>
+</li>
+</ul>
+<div class="flex flex-wrap gap-space-xs pt-space-xs">
+<span class="px-2.5 py-1 rounded bg-surface-container-high font-label-code-badge text-label-code-badge text-text-primary">Java</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high font-label-code-badge text-label-code-badge text-text-primary">Spring Boot</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high font-label-code-badge text-label-code-badge text-text-primary">Microservicios</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high font-label-code-badge text-label-code-badge text-text-primary">Oracle DB</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high font-label-code-badge text-label-code-badge text-text-primary">Azure DevOps</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high font-label-code-badge text-label-code-badge text-secondary font-mono">IA Integration</span>
+</div>
+</div>
+</div>
+<!-- Milestone 2: Novacomp Tech Lead -->
+<div class="relative group">
+<div class="absolute -left-[27px] md:-left-[35px] top-1.5 w-6 h-6 rounded-full bg-surface-canvas flex items-center justify-center">
+<div class="w-3.5 h-3.5 rounded-full bg-primary ring-4 ring-primary/20 group-hover:scale-125 transition-transform"></div>
+</div>
+<div class="p-space-lg rounded-2xl bg-surface-card/90 shadow-xl backdrop-blur-md transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-xs mb-space-sm">
+<div>
+<span class="font-label-mono text-label-mono text-text-muted px-2.5 py-0.5 rounded-full bg-surface-container-high inline-block mb-1">
+                  Ago 2019 – Nov 2021
+                </span>
+<h3 class="font-headline-md text-headline-md font-bold text-text-primary">
+                  Desarrollador FullStack &amp; Tech Lead
+                </h3>
+<span class="font-headline-sm text-[16px] text-text-secondary font-medium">Novacomp</span>
+</div>
+<span class="font-label-mono text-[12px] text-text-muted">Consultoría Internacional</span>
+</div>
+<ul class="space-y-space-sm font-body-md text-body-md text-text-secondary mb-space-md">
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span class="">Lideró equipos multidisciplinarios e implementó soluciones técnicas de outsourcing para <strong class="text-text-primary font-semibold">3 proyectos de alta criticidad</strong>.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span class="">Facilitó la comunicación directa entre directores de clientes corporativos y las células de desarrollo ágil.</span>
+</li>
+</ul>
+<div class="flex flex-wrap gap-space-xs pt-space-xs">
+<span class="px-2.5 py-1 rounded bg-surface-container-high font-label-code-badge text-label-code-badge text-text-primary">React</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high font-label-code-badge text-label-code-badge text-text-primary">Node.js</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high font-label-code-badge text-label-code-badge text-text-primary">TypeScript</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high font-label-code-badge text-label-code-badge text-text-primary">Jira</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high font-label-code-badge text-label-code-badge text-text-primary">Team Leadership</span>
+</div>
+</div>
+</div>
+<!-- Milestone 3: BAC Credomatic -->
+<div class="relative group">
+<div class="absolute -left-[27px] md:-left-[35px] top-1.5 w-6 h-6 rounded-full bg-surface-canvas flex items-center justify-center">
+<div class="w-3.5 h-3.5 rounded-full bg-accent-electric ring-4 ring-accent-electric/20 group-hover:scale-125 transition-transform"></div>
+</div>
+<div class="p-space-lg rounded-2xl bg-surface-card/90 shadow-xl backdrop-blur-md transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-xs mb-space-sm">
+<div>
+<span class="font-label-mono text-label-mono text-text-muted px-2.5 py-0.5 rounded-full bg-surface-container-high inline-block mb-1">
+                  Feb 2018 – Ago 2019
+                </span>
+<h3 class="font-headline-md text-headline-md font-bold text-text-primary">
+                  Desarrollador FullStack Senior
+                </h3>
+<span class="font-headline-sm text-[16px] text-text-secondary font-medium">BAC Credomatic</span>
+</div>
+<span class="font-label-mono text-[12px] text-text-muted">Banca Regional</span>
+</div>
+<ul class="space-y-space-sm font-body-md text-body-md text-text-secondary mb-space-md">
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-accent-electric text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span class="">Elevó la productividad en un <strong class="text-accent-electric font-semibold">500%</strong> mediante el diseño e implementación de cargas masivas automatizadas para facturación electrónica bancaria.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-accent-electric text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span class="">Desarrolló una plataforma integral de encuestas dinámicas de evaluación interna para la División de Recursos Humanos.</span>
+</li>
+</ul>
+<div class="flex flex-wrap gap-space-xs pt-space-xs">
+<span class="px-2.5 py-1 rounded bg-surface-container-high font-label-code-badge text-label-code-badge text-text-primary">C#</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high font-label-code-badge text-label-code-badge text-text-primary">.NET Core</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high font-label-code-badge text-label-code-badge text-text-primary">SQL Server</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high font-label-code-badge text-label-code-badge text-text-primary">Facturación Electrónica</span>
+</div>
+</div>
+</div>
+<!-- Milestone 4: Novacomp (2017 - 2018) -->
+<div class="relative group">
+<div class="absolute -left-[27px] md:-left-[35px] top-1.5 w-6 h-6 rounded-full bg-surface-canvas flex items-center justify-center">
+<div class="w-3.5 h-3.5 rounded-full bg-outline ring-4 ring-outline/20"></div>
+</div>
+<div class="p-space-lg rounded-2xl bg-surface-card/90 shadow-xl backdrop-blur-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-xs mb-space-xs">
+<div>
+<span class="font-label-mono text-label-mono text-text-muted px-2.5 py-0.5 rounded-full bg-surface-container-high inline-block mb-1">
+                  Ene 2017 – Feb 2018
+                </span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-text-primary">
+                  Desarrollador FullStack
+                </h3>
+<span class="font-body-md text-body-md text-text-secondary">Novacomp</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-text-secondary mb-space-sm">
+              Ejecución de requerimientos de alto estándar para clientes internacionales corporativos y modernización de interfaces con stacks reactivos.
+            </p>
+<div class="flex flex-wrap gap-space-xs">
+<span class="px-2.5 py-1 rounded bg-surface-container-high font-label-code-badge text-label-code-badge text-text-muted">JavaScript</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high font-label-code-badge text-label-code-badge text-text-muted">Web APIs</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high font-label-code-badge text-label-code-badge text-text-muted">CSS3 / HTML5</span>
+</div>
+</div>
+</div>
+<!-- Milestone 5: Datafactory CR (2015 - 2017) -->
+<div class="relative group">
+<div class="absolute -left-[27px] md:-left-[35px] top-1.5 w-6 h-6 rounded-full bg-surface-canvas flex items-center justify-center">
+<div class="w-3.5 h-3.5 rounded-full bg-outline-variant ring-4 ring-outline-variant/20"></div>
+</div>
+<div class="p-space-lg rounded-2xl bg-surface-card/90 shadow-xl backdrop-blur-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-xs mb-space-xs">
+<div>
+<span class="font-label-mono text-label-mono text-text-muted px-2.5 py-0.5 rounded-full bg-surface-container-high inline-block mb-1">
+                  Ene 2015 – Ene 2017
+                </span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-text-primary">
+                  Desarrollador FullStack Junior / Mid
+                </h3>
+<span class="font-body-md text-body-md text-text-secondary">Datafactory CR</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-text-secondary mb-space-sm">
+              Desarrollo de software empresarial, integración de bases de datos relacionales y diseño de APIs transaccionales.
+            </p>
+<div class="flex flex-wrap gap-space-xs">
+<span class="px-2.5 py-1 rounded bg-surface-container-high font-label-code-badge text-label-code-badge text-text-muted">C#</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high font-label-code-badge text-label-code-badge text-text-muted">SQL Server</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high font-label-code-badge text-label-code-badge text-text-muted">Backend Architecture</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. SECCIÓN CASOS DE ESTUDIO Y PROYECTOS DESTACADOS -->
+<section class="max-w-[1240px] mx-auto px-margin py-space-3xl" id="proyectos">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-2xl">
+<div>
+<span class="font-label-code-badge text-label-code-badge text-secondary uppercase tracking-widest">// CASOS DE ESTUDIO</span>
+<h2 class="font-headline-lg text-headline-lg font-bold text-text-primary tracking-tight mt-space-xs">
+            Proyectos de Misión Crítica
+          </h2>
+<p class="font-body-md text-body-md text-text-secondary max-w-[650px] mt-space-xs">
+            Soluciones de ingeniería implementadas a escala con retorno directo en eficiencia, automatización y resiliencia.
+          </p>
+</div>
+<div class="flex items-center gap-space-xs font-label-mono text-label-mono text-text-muted">
+<span class="w-2 h-2 rounded-full bg-accent-emerald inline-block"></span>
+<span class="">Arquitecturas Verificadas en Producción</span>
+</div>
+</div>
+<!-- Bento Grid Projects -->
+<div class="flex flex-col gap-space-xl"><div class="p-space-xl md:p-space-2xl rounded-3xl bg-surface-card/90 shadow-2xl backdrop-blur-xl border border-border-glass relative overflow-hidden group"><div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center"><div class="lg:col-span-7 flex flex-col justify-between"><div class="flex flex-wrap items-center gap-space-xs mb-space-sm"><span class="px-space-sm py-space-xs rounded bg-surface-container-high font-label-code-badge text-label-code-badge text-secondary flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-accent-emerald animate-ping"></span>PROYECTO DESTACADO • EN VIVO</span><span class="font-label-mono text-[11px] text-accent-electric uppercase tracking-wider">ECO-RETREAT &amp; HOSPITALITY PLATFORM</span></div><h3 class="font-headline-lg text-headline-lg font-bold text-text-primary tracking-tight mb-space-xs">Casa Xochimilco • Plataforma Digital &amp; Sistema de Reservas Directas</h3><p class="font-label-mono text-[12px] text-secondary mb-space-md">Arquitectura Web &amp; Experiencia Digital para Villa de Lujo en Guanacaste</p><p class="font-body-md text-body-md text-text-secondary leading-relaxed mb-space-lg">Diseño y desarrollo end-to-end de la presencia digital oficial para una propiedad ecológica de ultra-lujo en El Llano, Santa Cruz, Guanacaste. Arquitectura web moderna de alta fidelidad, integración de concierge conversacional vía WhatsApp, motor de reservas directas sin comisiones intermediarias, soporte bilingüe (ES/EN), diseño adaptado al patrimonio folclórico y optimización SEO local y performance (100% Core Web Vitals).</p><div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm mb-space-lg"><div class="p-space-sm rounded-xl bg-surface-container-low"><div class="font-headline-sm text-headline-sm font-bold text-accent-emerald">100%</div><span class="font-body-sm text-[12px] text-text-secondary block leading-snug mt-0.5">Core Web Vitals &amp; Carga Instantánea</span></div><div class="p-space-sm rounded-xl bg-surface-container-low"><div class="font-headline-sm text-headline-sm font-bold text-accent-electric">0% Comisiones</div><span class="font-body-sm text-[12px] text-text-secondary block leading-snug mt-0.5">Reservas Directas &amp; Concierge 24/7</span></div><div class="p-space-sm rounded-xl bg-surface-container-low"><div class="font-headline-sm text-headline-sm font-bold text-secondary">Global UX</div><span class="font-body-sm text-[12px] text-text-secondary block leading-snug mt-0.5">Diseño Responsive Bilingüe ES/EN</span></div></div><div class="flex flex-wrap gap-1.5 mb-space-lg"><span class="px-2.5 py-1 rounded bg-surface-container-high font-label-code-badge text-[11px] text-text-primary">Next.js / React</span><span class="px-2.5 py-1 rounded bg-surface-container-high font-label-code-badge text-[11px] text-text-primary">Tailwind CSS</span><span class="px-2.5 py-1 rounded bg-surface-container-high font-label-code-badge text-[11px] text-text-primary">TypeScript</span><span class="px-2.5 py-1 rounded bg-surface-container-high font-label-code-badge text-[11px] text-secondary font-mono">Performance &amp; SEO</span><span class="px-2.5 py-1 rounded bg-surface-container-high font-label-code-badge text-[11px] text-text-primary">Integración WhatsApp Concierge</span><span class="px-2.5 py-1 rounded bg-surface-container-high font-label-code-badge text-[11px] text-text-primary">Multi-idioma (ES/EN)</span><span class="px-2.5 py-1 rounded bg-surface-container-high font-label-code-badge text-[11px] text-text-primary">Lodgify Engine</span></div><div class="flex flex-wrap items-center gap-space-md pt-space-xs"><a class="inline-flex items-center gap-space-xs px-space-lg py-space-sm rounded-xl font-button-text text-button-text bg-primary-container text-on-primary-container hover:bg-secondary-container hover:text-on-secondary-container shadow-[0_0_24px_rgba(37,99,235,0.4)] transition-all transform hover:-translate-y-0.5" href="https://xochimilcostay.marchena.tech/" rel="noopener noreferrer" target="_blank"><span class="">Visitar Sitio Web en Vivo</span><span class="material-symbols-outlined text-[18px]">open_in_new</span></a><a class="font-button-text text-button-text text-secondary hover:text-primary inline-flex items-center gap-1 transition-colors" href="#contacto"><span class="">Consultar detalles técnicos</span><span class="material-symbols-outlined text-[16px]">arrow_forward</span></a></div></div><div class="lg:col-span-5"><div class="relative rounded-2xl overflow-hidden shadow-2xl border border-border-glass group/img"><img alt="Modern luxury ecological estate Casa Xochimilco Guanacaste" class="w-full h-[360px] md:h-[450px] object-cover transition-transform duration-300 group-hover/img:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtqXdYqAAdmI_EZemDb6388USJqUPnOtFIEPdAjZfvz23qHmLZacjkrqQZJ1qxzMmRY7Y8o7R0AqVpacjz7bYCauREYhYB-ZO8LiT4RMj4po7DqRJXg7XU3KvLLMQDQqC_bQuUySJ3RBTGOLY_yRZ05YGnxKfpCaniHCRdDtlk1eKo_ZQd71y-nPbrXuEOEFUL1b8JxtDInl_udsZFEODDsRZ8GqApCGRKS0DT984f6WAXY_brLve2wg"><div class="absolute inset-0 bg-gradient-to-t from-surface-canvas/90 via-transparent to-transparent pointer-events-none"></div><div class="absolute bottom-0 inset-x-0 p-space-md flex items-center justify-between backdrop-blur-md bg-surface-container-lowest/80 border-t border-border-glass"><div class="flex flex-col"><span class="font-label-mono text-[11px] text-text-primary font-semibold">Casa Xochimilco Guanacaste</span><span class="font-body-sm text-[11px] text-text-muted">xochimilcostay.marchena.tech</span></div><a class="w-9 h-9 rounded-xl bg-surface-card flex items-center justify-center text-secondary hover:bg-surface-container-high transition-colors shadow-sm" href="https://xochimilcostay.marchena.tech/" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[18px]">arrow_outward</span></a></div></div></div></div></div><div class="p-space-xl md:p-space-2xl rounded-3xl bg-surface-card/90 shadow-2xl backdrop-blur-xl border border-border-glass relative overflow-hidden group"><div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center"><div class="lg:col-span-7 flex flex-col justify-between"><div class="flex flex-wrap items-center gap-space-xs mb-space-sm"><span class="px-space-sm py-space-xs rounded bg-surface-container-high font-label-code-badge text-label-code-badge text-accent-emerald flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-accent-emerald animate-ping"></span>PROYECTO DESTACADO • EN VIVO</span><span class="font-label-mono text-[11px] text-secondary uppercase tracking-wider">IA &amp; NUTRITION STUDIO</span></div><h3 class="font-headline-lg text-headline-lg font-bold text-text-primary tracking-tight mb-space-xs">CalCal IA • Smart Health &amp; Nutrition Studio</h3><p class="font-label-mono text-[12px] text-secondary mb-space-md">IA Aplicada a la Salud &amp; Planificación Nutricional</p><p class="font-body-md text-body-md text-text-secondary leading-relaxed mb-space-lg">Aplicación web inteligente para el cálculo y balance dinámico de macronutrientes y déficit calórico en tiempo real. Incorpora un Coach con IA para generación instantánea de recetas personalizadas según ingredientes disponibles, registro de ingesta, gasto energético por ejercicios y dashboard analítico interactivo con métricas clave.</p><div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm mb-space-lg"><div class="p-space-sm rounded-xl bg-surface-container-low"><div class="font-headline-sm text-headline-sm font-bold text-accent-emerald">100% IA Asistida</div><span class="font-body-sm text-[12px] text-text-secondary block leading-snug mt-0.5">Coach Inteligente para Recetas &amp; Macros</span></div><div class="p-space-sm rounded-xl bg-surface-container-low"><div class="font-headline-sm text-headline-sm font-bold text-secondary">Tiempo Real</div><span class="font-body-sm text-[12px] text-text-secondary block leading-snug mt-0.5">Meta 1,800 kcal &amp; Monitoreo de Nutrientes</span></div><div class="p-space-sm rounded-xl bg-surface-container-low"><div class="font-headline-sm text-headline-sm font-bold text-accent-electric">Vercel Edge</div><span class="font-body-sm text-[12px] text-text-secondary block leading-snug mt-0.5">Arquitectura Serverless Ultrarrápida</span></div></div><div class="flex flex-wrap gap-1.5 mb-space-lg"><span class="px-2.5 py-1 rounded bg-surface-container-high font-label-code-badge text-[11px] text-text-primary">Next.js / React</span><span class="px-2.5 py-1 rounded bg-surface-container-high font-label-code-badge text-[11px] text-text-primary">Tailwind CSS</span><span class="px-2.5 py-1 rounded bg-surface-container-high font-label-code-badge text-[11px] text-secondary font-mono">Inteligencia Artificial (LLM Coach)</span><span class="px-2.5 py-1 rounded bg-surface-container-high font-label-code-badge text-[11px] text-text-primary">Vercel Edge</span><span class="px-2.5 py-1 rounded bg-surface-container-high font-label-code-badge text-[11px] text-text-primary">REST API</span><span class="px-2.5 py-1 rounded bg-surface-container-high font-label-code-badge text-[11px] text-text-primary">Charting &amp; Analytics</span></div><div class="flex flex-wrap items-center gap-space-md pt-space-xs"><a class="inline-flex items-center gap-space-xs px-space-lg py-space-sm rounded-xl font-button-text text-button-text bg-primary-container text-on-primary-container hover:bg-secondary-container hover:text-on-secondary-container shadow-[0_0_24px_rgba(37,99,235,0.4)] transition-all transform hover:-translate-y-0.5" href="https://cal-cal-ai-studio.vercel.app" rel="noopener noreferrer" target="_blank"><span class="">Visitar App en Vivo</span><span class="material-symbols-outlined text-[18px]">open_in_new</span></a><a class="font-button-text text-button-text text-secondary hover:text-primary inline-flex items-center gap-1 transition-colors" href="#contacto"><span class="">Consultar detalles técnicos</span><span class="material-symbols-outlined text-[16px]">arrow_forward</span></a></div></div><div class="lg:col-span-5"><div class="relative rounded-2xl overflow-hidden shadow-2xl border border-border-glass group/img"><img alt="CalCal IA Smart Health &amp; Nutrition Studio" class="w-full h-[360px] md:h-[450px] object-cover object-top transition-transform duration-300 group-hover/img:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVM_bCipm5OuV_xklzhKq4acm5117-hcXSctAlCZ7HmwaBLSQfMW-ZQ6PcWK1Rq9hRm6uCMr6qsHEEirWxUHd98ve_X8aNsMP1SWl-cLtt8QKwOOpJZG4BHz4AKmP-i4FmAOr3H-_4vmsHmUtbBXFdzd42-DrV4p2iNOuPNREftOvaplMYPZK5ZKREnctPU7CgqHsZYe3tMDTUrYUnTOPZ2NXv8b4BMoUwTyrvwlMUXa5trPorzeejDUq3NV9AYQ9DmGg"><div class="absolute inset-0 bg-gradient-to-t from-surface-canvas/90 via-transparent to-transparent pointer-events-none"></div><div class="absolute bottom-0 inset-x-0 p-space-md flex items-center justify-between backdrop-blur-md bg-surface-container-lowest/80 border-t border-border-glass"><div class="flex flex-col"><span class="font-label-mono text-[11px] text-text-primary font-semibold">CalCal IA • Studio</span><span class="font-body-sm text-[11px] text-text-muted">cal-cal-ai-studio.vercel.app</span></div><a class="w-9 h-9 rounded-xl bg-surface-card flex items-center justify-center text-secondary hover:bg-surface-container-high transition-colors shadow-sm" href="https://cal-cal-ai-studio.vercel.app" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[18px]">arrow_outward</span></a></div></div></div></div></div><div class="p-space-lg md:p-space-xl rounded-2xl bg-surface-card/60 backdrop-blur-md border border-border-glass relative overflow-hidden"><div class="flex flex-col md:flex-row md:items-center justify-between gap-space-lg"><div class="flex items-start gap-space-md"><div class="flex flex-col"><div class="flex items-center gap-space-xs mb-1"><span class="font-label-code-badge text-label-code-badge text-accent-electric uppercase tracking-widest">ACUERDOS DE CONFIDENCIALIDAD (NDA)</span></div><h4 class="font-headline-sm text-headline-sm font-bold text-text-primary mb-space-xs">Trayectoria Empresarial &amp; Proyectos Confidenciales</h4><p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">La mayoría de mis arquitecturas y sistemas desarrollados en el sector bancario, fintech y corporativo internacional (Scotiabank, BAC Credomatic, Novacomp) están protegidos bajo estrictos convenios de confidencialidad comercial y seguridad regulatoria. Los detalles de arquitectura, benchmarks y casos de estudio específicos se comparten bajo solicitud previa en sesiones técnicas privadas.</p></div></div></div></div></div>
+</section>
+<!-- 5. SECCIÓN STACK TÉCNICO & HABILIDADES -->
+<section class="max-w-[1240px] mx-auto px-margin py-space-3xl" id="habilidades">
+<div class="flex flex-col items-center text-center mb-space-2xl">
+<span class="font-label-code-badge text-label-code-badge text-secondary uppercase tracking-widest">// COMPETENCIAS VERIFICADAS</span>
+<h2 class="font-headline-lg text-headline-lg font-bold text-text-primary tracking-tight mt-space-xs">
+          Stack Tecnológico &amp; Arquitectura
+        </h2>
+<p class="font-body-md text-body-md text-text-secondary max-w-[600px] mt-space-xs">
+          Dominio de tecnologías probadas en entornos de alta disponibilidad, normativas bancarias y escalabilidad continua.
+        </p>
+</div>
+<!-- Categories 6-Card Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
+<!-- Category 1: Backend & Architecture -->
+<div class="p-space-lg rounded-2xl bg-surface-card/85 shadow-lg backdrop-blur-md">
+<div class="flex items-center gap-space-sm mb-space-md">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">dns</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-[16px] font-bold text-text-primary">Back End &amp; Architecture</h3>
+<span class="font-label-mono text-[11px] text-text-muted">Servicios Core &amp; APIs</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 rounded-lg bg-surface-card-elevated font-label-code-badge text-label-code-badge text-text-primary">Java</span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-card-elevated font-label-code-badge text-label-code-badge text-secondary font-semibold">Spring Boot</span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-card-elevated font-label-code-badge text-label-code-badge text-text-primary">C# (.NET Core)</span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-card-elevated font-label-code-badge text-label-code-badge text-text-primary">Node.js</span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-card-elevated font-label-code-badge text-label-code-badge text-text-primary">Next.js Backend</span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-card-elevated font-label-code-badge text-label-code-badge text-accent-electric">Microservicios</span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-card-elevated font-label-code-badge text-label-code-badge text-text-primary">REST APIs</span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-card-elevated font-label-code-badge text-label-code-badge text-text-primary">Event-Driven</span>
+</div>
+</div>
+<!-- Category 2: Front End & UI/UX -->
+<div class="p-space-lg rounded-2xl bg-surface-card/85 shadow-lg backdrop-blur-md">
+<div class="flex items-center gap-space-sm mb-space-md">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">devices</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-[16px] font-bold text-text-primary">Front End &amp; UI/UX</h3>
+<span class="font-label-mono text-[11px] text-text-muted">Interfaces Reactivas</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 rounded-lg bg-surface-card-elevated font-label-code-badge text-label-code-badge text-primary font-semibold">React.js</span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-card-elevated font-label-code-badge text-label-code-badge text-text-primary">TypeScript</span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-card-elevated font-label-code-badge text-label-code-badge text-text-primary">Next.js</span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-card-elevated font-label-code-badge text-label-code-badge text-text-primary">Tailwind CSS</span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-card-elevated font-label-code-badge text-label-code-badge text-text-primary">JavaScript ES6+</span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-card-elevated font-label-code-badge text-label-code-badge text-text-primary">HTML5 &amp; CSS3</span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-card-elevated font-label-code-badge text-label-code-badge text-text-muted">Bootstrap</span>
+</div>
+</div>
+<!-- Category 3: Bases de Datos -->
+<div class="p-space-lg rounded-2xl bg-surface-card/85 shadow-lg backdrop-blur-md">
+<div class="flex items-center gap-space-sm mb-space-md">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-accent-electric">
+<span class="material-symbols-outlined text-[22px]">database</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-[16px] font-bold text-text-primary">Bases de Datos</h3>
+<span class="font-label-mono text-[11px] text-text-muted">RDBMS &amp; Escalabilidad</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 rounded-lg bg-surface-card-elevated font-label-code-badge text-label-code-badge text-text-primary">Oracle DB</span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-card-elevated font-label-code-badge text-label-code-badge text-text-primary">SQL Server</span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-card-elevated font-label-code-badge text-label-code-badge text-text-primary">DB2</span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-card-elevated font-label-code-badge text-label-code-badge text-text-primary">PostgreSQL</span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-card-elevated font-label-code-badge text-label-code-badge text-text-primary">MySQL</span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-card-elevated font-label-code-badge text-label-code-badge text-text-muted">Stored Procedures</span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-card-elevated font-label-code-badge text-label-code-badge text-text-muted">Query Tuning</span>
+</div>
+</div>
+<!-- Category 4: DevOps & Cloud -->
+<div class="p-space-lg rounded-2xl bg-surface-card/85 shadow-lg backdrop-blur-md">
+<div class="flex items-center gap-space-sm mb-space-md">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-accent-emerald">
+<span class="material-symbols-outlined text-[22px]">cloud_sync</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-[16px] font-bold text-text-primary">DevOps &amp; Cloud</h3>
+<span class="font-label-mono text-[11px] text-text-muted">Infraestructura &amp; Pipelines</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 rounded-lg bg-surface-card-elevated font-label-code-badge text-label-code-badge text-accent-emerald font-semibold">Azure DevOps</span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-card-elevated font-label-code-badge text-label-code-badge text-text-primary">CI/CD Pipelines</span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-card-elevated font-label-code-badge text-label-code-badge text-text-primary">Docker</span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-card-elevated font-label-code-badge text-label-code-badge text-text-primary">Git &amp; BitBucket</span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-card-elevated font-label-code-badge text-label-code-badge text-text-primary">Continuous Monitoring</span>
+</div>
+</div>
+<!-- Category 5: Inteligencia Artificial -->
+<div class="p-space-lg rounded-2xl bg-surface-card/85 shadow-lg backdrop-blur-md">
+<div class="flex items-center gap-space-sm mb-space-md">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">smart_toy</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-[16px] font-bold text-text-primary">Inteligencia Artificial</h3>
+<span class="font-label-mono text-[11px] text-text-muted">Aceleración de Flujos</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 rounded-lg bg-surface-card-elevated font-label-code-badge text-label-code-badge text-secondary font-semibold">GitHub Copilot</span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-card-elevated font-label-code-badge text-label-code-badge text-text-primary">Integración de LLMs</span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-card-elevated font-label-code-badge text-label-code-badge text-text-primary">OpenAI APIs</span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-card-elevated font-label-code-badge text-label-code-badge text-text-primary">Generación de Tests</span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-card-elevated font-label-code-badge text-label-code-badge text-text-primary">Refactor Asistido</span>
+</div>
+</div>
+<!-- Category 6: Metodologías & Liderazgo -->
+<div class="p-space-lg rounded-2xl bg-surface-card/85 shadow-lg backdrop-blur-md">
+<div class="flex items-center gap-space-sm mb-space-md">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[22px]">groups</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-[16px] font-bold text-text-primary">Liderazgo &amp; Gestión</h3>
+<span class="font-label-mono text-[11px] text-text-muted">Cultura de Ingeniería</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 rounded-lg bg-surface-card-elevated font-label-code-badge text-label-code-badge text-tertiary font-semibold">Tech Lead</span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-card-elevated font-label-code-badge text-label-code-badge text-text-primary">Scrum &amp; Agile</span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-card-elevated font-label-code-badge text-label-code-badge text-text-primary">Jira &amp; Confluence</span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-card-elevated font-label-code-badge text-label-code-badge text-text-primary">Code Reviews</span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-card-elevated font-label-code-badge text-label-code-badge text-text-primary">Arquitectura Limpia</span>
+</div>
+</div>
+</div>
+</section><section class="max-w-[1240px] mx-auto px-margin py-space-3xl" id="certificaciones">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-2xl">
+<div>
+<div class="inline-flex items-center gap-2 mb-space-xs">
+<span class="font-label-code-badge text-label-code-badge text-secondary uppercase tracking-widest">// CREDENCIALES &amp; BADGE WALLET</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-accent-emerald font-label-mono text-[11px] inline-flex items-center gap-1 border border-border-glass"><span class="material-symbols-outlined text-[14px]">verified</span> Credly &amp; Google Cloud</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg font-bold text-text-primary tracking-tight mt-space-xs">
+Certificaciones &amp; Insignias Oficiales
+</h2>
+<p class="font-body-md text-body-md text-text-secondary max-w-[680px] mt-space-xs">
+Especializaciones técnicas en Google Cloud Architecture, Kubernetes, Serverless, DevOps &amp; Liderazgo Ejecutivo por McKinsey.org.
+</p>
+</div>
+<a class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-xl font-button-text text-button-text bg-surface-card hover:bg-surface-container-high text-text-primary hover:text-secondary border border-border-glass shadow-md transition-all shrink-0" href="https://www.credly.com/users/oscar-marchena.a3eb5509/badges" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px] text-accent-electric">workspace_premium</span>
+<span class="">Verificar en Credly</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</div>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Badge 1: McKinsey Forward -->
+<div class="p-space-lg rounded-2xl bg-surface-card/90 border border-border-glass backdrop-blur-md hover:-translate-y-1 hover:border-secondary/40 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group">
+<div>
+<div class="flex items-center justify-between gap-2 mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-[#001A9C]/30 border border-[#001A9C]/50 flex items-center justify-center p-2 text-primary shadow-sm">
+<span class="material-symbols-outlined text-[26px] text-accent-electric">military_tech</span>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-[#001A9C]/20 border border-[#001A9C]/40 text-primary font-label-mono text-[11px] font-semibold">McKinsey.org</span>
+</div>
+<h3 class="font-headline-sm text-[16px] font-bold text-text-primary leading-snug mb-space-xs group-hover:text-primary transition-colors">
+McKinsey.org Forward Program
+</h3>
+<p class="font-body-sm text-body-sm text-text-secondary mb-space-md">
+Liderazgo adaptativo, pensamiento estructurado, resolución de problemas y agilidad digital empresarial.
+</p>
+</div>
+<div class="pt-space-sm border-t border-border-glass flex items-center justify-between text-body-sm">
+<span class="font-label-mono text-[11px] text-text-muted flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">event</span> Jun 2026</span>
+<span class="inline-flex items-center gap-1 font-label-mono text-[11px] text-accent-emerald font-semibold"><span class="material-symbols-outlined text-[14px]">check_circle</span> Verificado</span>
+</div>
+</div>
+
+<!-- Badge 2: Apigee X -->
+<div class="p-space-lg rounded-2xl bg-surface-card/90 border border-border-glass backdrop-blur-md hover:-translate-y-1 hover:border-secondary/40 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group">
+<div>
+<div class="flex items-center justify-between gap-2 mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-secondary/10 border border-secondary/30 flex items-center justify-center p-2 text-secondary shadow-sm">
+<span class="material-symbols-outlined text-[26px] text-secondary">api</span>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-secondary font-label-mono text-[11px] font-semibold">Google Cloud</span>
+</div>
+<h3 class="font-headline-sm text-[16px] font-bold text-text-primary leading-snug mb-space-xs group-hover:text-secondary transition-colors">
+Develop and Secure APIs with Apigee X
+</h3>
+<p class="font-body-sm text-body-sm text-text-secondary mb-space-md">
+Skill Badge • Gestión de API Proxies, políticas de autenticación OAuth, tráfico y seguridad perimetral de APIs.
+</p>
+</div>
+<div class="pt-space-sm border-t border-border-glass flex items-center justify-between text-body-sm">
+<span class="font-label-mono text-[11px] text-text-muted flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">event</span> Sep 2025</span>
+<span class="inline-flex items-center gap-1 font-label-mono text-[11px] text-secondary font-semibold"><span class="material-symbols-outlined text-[14px]">verified</span> Skill Badge</span>
+</div>
+</div>
+
+<!-- Badge 3: Kubernetes -->
+<div class="p-space-lg rounded-2xl bg-surface-card/90 border border-border-glass backdrop-blur-md hover:-translate-y-1 hover:border-secondary/40 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group">
+<div>
+<div class="flex items-center justify-between gap-2 mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary-container/20 border border-primary-container/40 flex items-center justify-center p-2 text-primary shadow-sm">
+<span class="material-symbols-outlined text-[26px] text-primary">hub</span>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-secondary font-label-mono text-[11px] font-semibold">Google Cloud</span>
+</div>
+<h3 class="font-headline-sm text-[16px] font-bold text-text-primary leading-snug mb-space-xs group-hover:text-primary transition-colors">
+Deploy Kubernetes Applications on Google Cloud
+</h3>
+<p class="font-body-sm text-body-sm text-text-secondary mb-space-md">
+Skill Badge • Orquestación en GKE, despliegues continuos de pods, configuración de Services y balanceo en clusters.
+</p>
+</div>
+<div class="pt-space-sm border-t border-border-glass flex items-center justify-between text-body-sm">
+<span class="font-label-mono text-[11px] text-text-muted flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">event</span> Sep 2025</span>
+<span class="inline-flex items-center gap-1 font-label-mono text-[11px] text-secondary font-semibold"><span class="material-symbols-outlined text-[14px]">verified</span> Skill Badge</span>
+</div>
+</div>
+
+<!-- Badge 4: Cloud Run -->
+<div class="p-space-lg rounded-2xl bg-surface-card/90 border border-border-glass backdrop-blur-md hover:-translate-y-1 hover:border-secondary/40 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group">
+<div>
+<div class="flex items-center justify-between gap-2 mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-accent-electric/15 border border-accent-electric/30 flex items-center justify-center p-2 text-accent-electric shadow-sm">
+<span class="material-symbols-outlined text-[26px] text-accent-electric">cloud_queue</span>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-secondary font-label-mono text-[11px] font-semibold">Google Cloud</span>
+</div>
+<h3 class="font-headline-sm text-[16px] font-bold text-text-primary leading-snug mb-space-xs group-hover:text-accent-electric transition-colors">
+Develop Serverless Applications on Cloud Run
+</h3>
+<p class="font-body-sm text-body-sm text-text-secondary mb-space-md">
+Skill Badge • Contenedores serverless, auto-scaling de microservicios e integración con Eventarc y Cloud Pub/Sub.
+</p>
+</div>
+<div class="pt-space-sm border-t border-border-glass flex items-center justify-between text-body-sm">
+<span class="font-label-mono text-[11px] text-text-muted flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">event</span> Sep 2025</span>
+<span class="inline-flex items-center gap-1 font-label-mono text-[11px] text-secondary font-semibold"><span class="material-symbols-outlined text-[14px]">verified</span> Skill Badge</span>
+</div>
+</div>
+
+<!-- Badge 5: Firebase -->
+<div class="p-space-lg rounded-2xl bg-surface-card/90 border border-border-glass backdrop-blur-md hover:-translate-y-1 hover:border-secondary/40 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group">
+<div>
+<div class="flex items-center justify-between gap-2 mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-[#FF9100]/15 border border-[#FF9100]/30 flex items-center justify-center p-2 text-[#FFB74D] shadow-sm">
+<span class="material-symbols-outlined text-[26px] text-secondary">local_fire_department</span>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-secondary font-label-mono text-[11px] font-semibold">Google Cloud</span>
+</div>
+<h3 class="font-headline-sm text-[16px] font-bold text-text-primary leading-snug mb-space-xs group-hover:text-secondary transition-colors">
+Develop Serverless Apps with Firebase
+</h3>
+<p class="font-body-sm text-body-sm text-text-secondary mb-space-md">
+Skill Badge • Firestore, Cloud Functions reactivas, reglas de seguridad de datos y autenticación de usuarios.
+</p>
+</div>
+<div class="pt-space-sm border-t border-border-glass flex items-center justify-between text-body-sm">
+<span class="font-label-mono text-[11px] text-text-muted flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">event</span> Sep 2025</span>
+<span class="inline-flex items-center gap-1 font-label-mono text-[11px] text-secondary font-semibold"><span class="material-symbols-outlined text-[14px]">verified</span> Skill Badge</span>
+</div>
+</div>
+
+<!-- Badge 6: Terraform on GCP -->
+<div class="p-space-lg rounded-2xl bg-surface-card/90 border border-border-glass backdrop-blur-md hover:-translate-y-1 hover:border-secondary/40 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group">
+<div>
+<div class="flex items-center justify-between gap-2 mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-tertiary-container/20 border border-tertiary-container/40 flex items-center justify-center p-2 text-tertiary shadow-sm">
+<span class="material-symbols-outlined text-[26px] text-tertiary">token</span>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-secondary font-label-mono text-[11px] font-semibold">Google Cloud</span>
+</div>
+<h3 class="font-headline-sm text-[16px] font-bold text-text-primary leading-snug mb-space-xs group-hover:text-tertiary transition-colors">
+Build Infrastructure with Terraform on Google Cloud
+</h3>
+<p class="font-body-sm text-body-sm text-text-secondary mb-space-md">
+Skill Badge • Infraestructura como Código (IaC), gestión de estado remoto en Cloud Storage y provisión modular de recursos.
+</p>
+</div>
+<div class="pt-space-sm border-t border-border-glass flex items-center justify-between text-body-sm">
+<span class="font-label-mono text-[11px] text-text-muted flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">event</span> Oct 2024</span>
+<span class="inline-flex items-center gap-1 font-label-mono text-[11px] text-secondary font-semibold"><span class="material-symbols-outlined text-[14px]">verified</span> Skill Badge</span>
+</div>
+</div>
+
+<!-- Badge 7: App Dev Environment -->
+<div class="p-space-lg rounded-2xl bg-surface-card/90 border border-border-glass backdrop-blur-md hover:-translate-y-1 hover:border-secondary/40 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group">
+<div>
+<div class="flex items-center justify-between gap-2 mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-accent-emerald/15 border border-accent-emerald/30 flex items-center justify-center p-2 text-accent-emerald shadow-sm">
+<span class="material-symbols-outlined text-[26px] text-accent-emerald">terminal</span>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-secondary font-label-mono text-[11px] font-semibold">Google Cloud</span>
+</div>
+<h3 class="font-headline-sm text-[16px] font-bold text-text-primary leading-snug mb-space-xs group-hover:text-accent-emerald transition-colors">
+Set Up an App Dev Environment on Google Cloud
+</h3>
+<p class="font-body-sm text-body-sm text-text-secondary mb-space-md">
+Skill Badge • Cloud Shell, IAM de desarrollo, repositorios Cloud Source, Cloud Build y pipelines automatizados.
+</p>
+</div>
+<div class="pt-space-sm border-t border-border-glass flex items-center justify-between text-body-sm">
+<span class="font-label-mono text-[11px] text-text-muted flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">event</span> Oct 2024</span>
+<span class="inline-flex items-center gap-1 font-label-mono text-[11px] text-secondary font-semibold"><span class="material-symbols-outlined text-[14px]">verified</span> Skill Badge</span>
+</div>
+</div>
+
+<!-- Badge 8: Load Balancing -->
+<div class="p-space-lg rounded-2xl bg-surface-card/90 border border-border-glass backdrop-blur-md hover:-translate-y-1 hover:border-secondary/40 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group">
+<div>
+<div class="flex items-center justify-between gap-2 mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-secondary-container/20 border border-secondary-container/40 flex items-center justify-center p-2 text-secondary shadow-sm">
+<span class="material-symbols-outlined text-[26px] text-secondary">alt_route</span>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-secondary font-label-mono text-[11px] font-semibold">Google Cloud</span>
+</div>
+<h3 class="font-headline-sm text-[16px] font-bold text-text-primary leading-snug mb-space-xs group-hover:text-secondary transition-colors">
+Implement Load Balancing on Compute Engine
+</h3>
+<p class="font-body-sm text-body-sm text-text-secondary mb-space-md">
+Skill Badge • Cloud Load Balancing HTTP(S), Network Load Balancer, grupos de instancias administradas (MIGs) y alta disponibilidad.
+</p>
+</div>
+<div class="pt-space-sm border-t border-border-glass flex items-center justify-between text-body-sm">
+<span class="font-label-mono text-[11px] text-text-muted flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">event</span> Sep 2024</span>
+<span class="inline-flex items-center gap-1 font-label-mono text-[11px] text-secondary font-semibold"><span class="material-symbols-outlined text-[14px]">verified</span> Skill Badge</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. SECCIÓN HABLEMOS / CONTACTO DIRECTO -->
+<section class="max-w-[1240px] mx-auto px-margin py-space-3xl mb-space-xl" id="contacto">
+<div class="p-space-xl md:p-space-2xl rounded-3xl bg-surface-card/90 shadow-2xl backdrop-blur-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl">
+<!-- Contact Info Left Column -->
+<div class="lg:col-span-5 flex flex-col justify-between">
+<div>
+<span class="font-label-code-badge text-label-code-badge text-secondary uppercase tracking-widest">// CONVERSEMOS</span>
+<h2 class="font-headline-lg text-headline-lg font-bold text-text-primary tracking-tight mt-space-xs mb-space-md">
+                Hablemos de tu próximo desafío tecnológico.
+              </h2>
+<p class="font-body-md text-body-md text-text-secondary leading-relaxed mb-space-xl">
+                Disponible para roles estratégicos como Tech Lead, Senior Software Engineer o consultoría de modernización en banca, microservicios y flujos asistidos con IA.
+              </p>
+<!-- Quick Direct Coordinates -->
+<div class="space-y-space-md">
+<a class="flex items-center gap-space-sm p-space-md rounded-xl bg-surface-container-high/80 hover:bg-surface-container-high transition-colors group" href="mailto:oscar.marchena@hotmail.com">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center text-secondary group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">alternate_email</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-mono text-[11px] text-text-muted">CORREO DIRECTO</span>
+<span class="font-headline-sm text-[15px] font-semibold text-text-primary group-hover:text-secondary transition-colors">oscar.marchena@hotmail.com</span>
+</div>
+</a>
+<a class="flex items-center gap-space-sm p-space-md rounded-xl bg-surface-container-high/80 hover:bg-surface-container-high transition-colors group" href="tel:+50689738816">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center text-accent-emerald group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">call</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-mono text-[11px] text-text-muted">TELÉFONO &amp; WHATSAPP</span>
+<span class="font-headline-sm text-[15px] font-semibold text-text-primary group-hover:text-accent-emerald transition-colors">+506 8973 8816</span>
+</div>
+</a>
+<div class="flex items-center gap-space-sm p-space-md rounded-xl bg-surface-container-high/80">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center text-accent-electric">
+<span class="material-symbols-outlined text-[20px]">location_on</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-mono text-[11px] text-text-muted">UBICACIÓN</span>
+<span class="font-headline-sm text-[15px] font-semibold text-text-primary">Guanacaste, Costa Rica (Remoto Global)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Resume Download Button -->
+<div class="pt-space-xl">
+<a class="inline-flex items-center justify-center gap-space-xs w-full py-space-sm px-space-md rounded-xl font-button-text text-button-text bg-surface-container-high hover:bg-surface-variant text-text-primary hover:text-secondary shadow-md transition-all" download="" href="assets/Curriculum vitae - Oscar Marchena Chaves_ES.pdf">
+<span class="material-symbols-outlined text-[18px]">description</span>
+<span class="">Descargar CV Completo (PDF)</span>
+</a>
+</div>
+</div>
+<!-- Contact Form Right Column -->
+<div class="lg:col-span-7 bg-surface-container-lowest/80 p-space-lg md:p-space-xl rounded-2xl shadow-inner">
+<h3 class="font-headline-sm text-headline-sm font-semibold text-text-primary mb-space-sm">
+              Enviar Mensaje Directo
+            </h3>
+<p class="font-body-sm text-body-sm text-text-muted mb-space-lg">
+              Respuesta habitual en menos de 24 horas hábiles.
+            </p>
+<form class="space-y-space-md" id="contact-form" onsubmit="event.preventDefault(); document.getElementById('form-feedback').classList.remove('hidden');">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="space-y-1">
+<label class="font-label-mono text-[11px] text-text-secondary uppercase" for="name">Nombre</label>
+<input class="w-full px-space-md py-space-sm rounded-xl bg-surface-card text-text-primary placeholder:text-text-muted text-body-md focus:outline-none focus:ring-2 focus:ring-primary-container shadow-inner" id="name" placeholder="Ej. Roberto Rodríguez" required="" type="text">
+</div>
+<div class="space-y-1">
+<label class="font-label-mono text-[11px] text-text-secondary uppercase" for="email">Correo Electrónico</label>
+<input class="w-full px-space-md py-space-sm rounded-xl bg-surface-card text-text-primary placeholder:text-text-muted text-body-md focus:outline-none focus:ring-2 focus:ring-primary-container shadow-inner" id="email" placeholder="tu-empresa@dominio.com" required="" type="email">
+</div>
+</div>
+<div class="space-y-1">
+<label class="font-label-mono text-[11px] text-text-secondary uppercase" for="subject">Asunto / Proyecto</label>
+<input class="w-full px-space-md py-space-sm rounded-xl bg-surface-card text-text-primary placeholder:text-text-muted text-body-md focus:outline-none focus:ring-2 focus:ring-primary-container shadow-inner" id="subject" placeholder="Oportunidad Senior / Consultoría de Microservicios" required="" type="text">
+</div>
+<div class="space-y-1">
+<label class="font-label-mono text-[11px] text-text-secondary uppercase" for="message">Mensaje</label>
+<textarea class="w-full px-space-md py-space-sm rounded-xl bg-surface-card text-text-primary placeholder:text-text-muted text-body-md focus:outline-none focus:ring-2 focus:ring-primary-container shadow-inner resize-none" id="message" placeholder="Describe brevemente el alcance técnico, requerimientos del equipo o contexto..." required="" rows="4"></textarea>
+</div>
+<button class="w-full inline-flex items-center justify-center gap-space-xs py-space-md px-space-lg rounded-xl font-button-text text-button-text bg-primary-container text-on-primary-container hover:bg-secondary-container hover:text-on-secondary-container shadow-[0_0_24px_rgba(37,99,235,0.35)] transition-all cursor-pointer" type="submit">
+<span class="">Enviar Mensaje</span>
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+<div class="hidden p-space-md rounded-xl bg-surface-container-high text-accent-emerald font-body-sm text-center flex items-center justify-center gap-2" id="form-feedback">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span class="">¡Mensaje recibido con éxito! Óscar responderá a la brevedad.</span>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div></main><footer class="w-full bg-surface-container-lowest py-space-2xl"><div class="max-w-[1240px] mx-auto px-margin"><div class="flex flex-col md:flex-row items-center justify-between gap-space-lg pb-space-xl"><div class="flex flex-col items-center md:items-start gap-space-xs"><div class="flex items-center gap-space-sm"><div class="px-space-sm py-space-xs rounded bg-surface-container-high font-label-code-badge text-label-code-badge text-secondary">&lt;/&gt;</div><span class="font-headline-sm text-headline-sm font-bold text-text-primary">Marchena<span class="text-secondary">.tech</span></span></div><p class="font-body-sm text-body-sm text-text-secondary text-center md:text-left">Arquitectura de Software &amp; Consultoría Tecnológica Empresarial.</p></div><div class="inline-flex items-center gap-space-sm px-space-md py-space-xs rounded-full bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><span class="relative flex h-2.5 w-2.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-emerald opacity-75"></span><span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-accent-emerald"></span></span><span class="font-label-mono text-label-mono text-on-surface-variant">Disponible para proyectos &amp; consultoría</span></div><div class="flex items-center gap-space-sm"><a aria-label="LinkedIn" class="w-10 h-10 rounded-xl bg-surface-container-low flex items-center justify-center text-text-secondary hover:text-secondary hover:bg-surface-container-high transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">share</span></a><a aria-label="GitHub Code Repositories" class="w-10 h-10 rounded-xl bg-surface-container-low flex items-center justify-center text-text-secondary hover:text-secondary hover:bg-surface-container-high transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">code</span></a><a aria-label="Contact Email" class="w-10 h-10 rounded-xl bg-surface-container-low flex items-center justify-center text-text-secondary hover:text-secondary hover:bg-surface-container-high transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">alternate_email</span></a><a aria-label="Public Broadcast Stream" class="w-10 h-10 rounded-xl bg-surface-container-low flex items-center justify-center text-text-secondary hover:text-secondary hover:bg-surface-container-high transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">tag</span></a></div></div><div class="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-sm text-center"><span class="font-label-mono text-label-mono text-text-muted">© 2026 Óscar Ricardo Marchena Chaves (MarcheDev). Todos los derechos reservados.</span><div class="flex items-center gap-space-md font-label-mono text-label-mono text-text-muted"><span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-accent-electric">verified</span> Fintech &amp; Cloud Ready</span><span class="">San José, Costa Rica</span></div></div></div></footer>
+
+</body></html>
