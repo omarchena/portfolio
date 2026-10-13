@@ -33,7 +33,7 @@ const ids = ["sobre-mi", "experiencia", "proyectos", "certificaciones", "habilid
       <div class="header-inner">
         <a class="brand" href={`/${lang}/`} aria-label="Marchena.tech, inicio">
           <span class="brand-mark">&lt;/&gt;</span>
-          <span class="brand-name">Marchena<span>.tech</span><small>Óscar Marchena</small></span>
+          <span class="brand-name">Marchena<span>.tech</span><small>Oscar Marchena</small></span>
         </a>
         <nav class="desktop-nav" aria-label="Navegación principal">
           {ids.map((id, index) => <a href={`#${id}`}>{nav[index]}</a>)}
@@ -60,10 +60,10 @@ const ids = ["sobre-mi", "experiencia", "proyectos", "certificaciones", "habilid
       <div class="footer-inner">
         <a class="brand" href={`/${lang}/`}>
           <span class="brand-mark">&lt;/&gt;</span>
-          <span class="brand-name">Marchena<span>.tech</span><small>Óscar Marchena</small></span>
+          <span class="brand-name">Marchena<span>.tech</span><small>Oscar Marchena</small></span>
         </a>
         <p><slot name="footer" /></p>
-        <span class="copyright">© {new Date().getFullYear()} Óscar Ricardo Marchena Chaves. <slot name="rights" /></span>
+        <span class="copyright">© {new Date().getFullYear()} Oscar Ricardo Marchena Chaves. <slot name="rights" /></span>
       </div>
     </footer>
     <script>
